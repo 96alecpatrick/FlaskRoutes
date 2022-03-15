@@ -1,0 +1,7 @@
+@app.route("/login", methods =["GET", "POST"])
+def login(form):
+    if request.method == "POST" and form.validate_on_submit() :
+        request.form.get("username")
+        request.form.get("password")
+        flash(f"Hello, {form.username.data} You have been logged in.")
+        return redirect(url_for("home.html"))
