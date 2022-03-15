@@ -1,0 +1,7 @@
+@app.route("/logout")
+def logout():
+    user =User()
+    if logout== True:
+        session.pop(f"{user}")
+        logout_user("logout_user")
+    return redirect(url_for("login.html"))
