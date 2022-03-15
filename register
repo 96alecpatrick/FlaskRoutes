@@ -1,0 +1,6 @@
+@app.route("/register")
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit:
+        flash(f"Hello, {form.username.data}", "thank you for registering.")
+        return redirect(url_for("hurt.html"))
