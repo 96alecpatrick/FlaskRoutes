@@ -1,0 +1,9 @@
+app.route("/Contact")
+def contact():
+    form = LoginForm()
+    msg = Message(",Hello, how are you?", sender ="{{form.email}}" )
+    if form.connect():
+        for user in form.username:
+            if form.submit == "POST":
+                msg.send()
+    return redirect(url_for("contact"), form = form)
